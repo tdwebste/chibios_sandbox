@@ -1,0 +1,21 @@
+*~
+*.o
+*.d
+*.elf
+*.ch
+*.exe
+*.bak
+*.hex
+*.bin
+*.cout
+.dep
+.project
+alvinnotes.txt
+build
+*.sw[nop]
+*.pyc
+*.log
+log.fmpp
+
+#ignore chibios_old in tim ham's code
+chibios_old

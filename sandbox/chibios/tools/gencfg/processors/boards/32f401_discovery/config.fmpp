@@ -1,0 +1,6 @@
+sourceRoot: templates
+outputRoot:   ../../../../../boards/32f401_discovery
+
+data: {
+    doc1: xml(../../../../xml/32f401_discovery.xml)
+}
