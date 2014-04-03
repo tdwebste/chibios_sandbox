@@ -77,7 +77,7 @@ endif
 # ChibiOS root is assumed to be in the same directory as active_safety root 
 CHIBIOS = ../../../../chibios
 CHIBIOS_LOCAL = ..
-include $(CHIBIOS_LOCAL)/boards/GENIST_STM32F373_V5/board.mk
+include $(CHIBIOS_LOCAL)/boards/32f401_discovery/board.mk
 include $(CHIBIOS)/os/hal/platforms/STM32F37x/platform.mk
 include $(CHIBIOS)/os/hal/hal.mk
 include $(CHIBIOS)/os/ports/GCC/ARMCMx/STM32F3xx/port.mk

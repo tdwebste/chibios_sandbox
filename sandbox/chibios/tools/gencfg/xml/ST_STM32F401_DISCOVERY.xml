@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- STM32F401 Discovery -->
+<!-- STM32F3 Discovery Genist-->
 <board
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="http://www.chibios.org/xml/schema/boards/stm32f4xx_board.xsd">
+  xsi:noNamespaceSchemaLocation="http://www.chibios.org/xml/schema/boards/stm32f37x_board.xsd">
   <board_name>STM32F401 Discovery</board_name>
   <board_id>ST_STM32F401_DISCOVERY</board_id>
   <board_functions></board_functions>

@@ -22,14 +22,14 @@
 #define _BOARD_H_
 
 /*
- * Setup for STM32F3 Discovery for Genist Test board.
+ * Setup for STM32F401 Discovery board.
  */
 
 /*
  * Board identifier.
  */
-#define BOARD_GENIST_STM32F3_DISCOVERY
-#define BOARD_NAME                  "STM32F3 Discovery for Genist Test"
+#define BOARD_ST_STM32F401_DISCOVERY
+#define BOARD_NAME                  "STM32F401 Discovery"
 
 /*
  * Board oscillators-related settings.
