@@ -153,7 +153,7 @@
       <pin0
         ID=""
         Type="PushPull"
-        Speed="Minimum"
+        Speed="Maximum"
         Resistor="PullUp"
         Level="High"
         Mode="Input"
@@ -161,7 +161,7 @@
       <pin1
         ID=""
         Type="PushPull"
-        Speed="Minimum"
+        Speed="Maximum"
         Resistor="PullUp"
         Level="High"
         Mode="Input"
@@ -169,7 +169,7 @@
       <pin2
         ID=""
         Type="PushPull"
-        Speed="Minimum"
+        Speed="Maximum"
         Resistor="PullUp"
         Level="High"
         Mode="Input"
@@ -185,7 +185,7 @@
       <pin4
         ID=""
         Type="PushPull"
-        Speed="Minimum"
+        Speed="Maximum"
         Resistor="PullUp"
         Level="High"
         Mode="Input"
@@ -193,7 +193,7 @@
       <pin5
         ID=""
         Type="PushPull"
-        Speed="Minimum"
+        Speed="Maximum"
         Resistor="PullUp"
         Level="High"
         Mode="Input"
@@ -210,7 +210,7 @@
         ID=""
         Type="OpenDrain"
         Speed="Maximum"
-        Resistor="Floating"
+        Resistor="PullUp"
         Level="High"
         Mode="Input"
         Alternate="0" />
@@ -228,8 +228,8 @@
         Speed="Minimum"
         Resistor="PullUp"
         Level="High"
-        Mode="Input"
-        Alternate="0" />
+        Mode="Alternate"
+        Alternate="4" />
       <pin10
         ID="CLK_IN"
         Type="PushPull"
@@ -242,7 +242,7 @@
         ID="NOT_AVAILABLE"
         Type="PushPull"
         Speed="Minimum"
-        Resistor="PullUp"
+        Resistor="Floating"
         Level="High"
         Mode="Input"
         Alternate="0" />
