@@ -329,9 +329,9 @@
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN4) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN5) |       \
                                      PIN_OTYPE_OPENDRAIN(GPIOB_SCL) |       \
-                                     PIN_OTYPE_OPENDRAIN(GPIOB_PIN7) |      \
+                                     PIN_OTYPE_PUSHPULL(GPIOB_PIN7) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN8) |       \
-                                     PIN_OTYPE_PUSHPULL(GPIOB_SDA) |        \
+                                     PIN_OTYPE_OPENDRAIN(GPIOB_SDA) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOB_CLK_IN) |     \
                                      PIN_OTYPE_PUSHPULL(GPIOB_NOT_AVAILABLE) |\
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN12) |      \
@@ -346,14 +346,14 @@
                                      PIN_OSPEED_100M(GPIOB_PIN5) |          \
                                      PIN_OSPEED_100M(GPIOB_SCL) |           \
                                      PIN_OSPEED_100M(GPIOB_PIN7) |          \
-                                     PIN_OSPEED_2M(GPIOB_PIN8) |            \
-                                     PIN_OSPEED_2M(GPIOB_SDA) |             \
-                                     PIN_OSPEED_2M(GPIOB_CLK_IN) |          \
-                                     PIN_OSPEED_2M(GPIOB_NOT_AVAILABLE) |   \
-                                     PIN_OSPEED_2M(GPIOB_PIN12) |           \
-                                     PIN_OSPEED_2M(GPIOB_PIN13) |           \
-                                     PIN_OSPEED_2M(GPIOB_PIN14) |           \
-                                     PIN_OSPEED_2M(GPIOB_PIN15))
+                                     PIN_OSPEED_100M(GPIOB_PIN8) |          \
+                                     PIN_OSPEED_100M(GPIOB_SDA) |           \
+                                     PIN_OSPEED_100M(GPIOB_CLK_IN) |        \
+                                     PIN_OSPEED_100M(GPIOB_NOT_AVAILABLE) | \
+                                     PIN_OSPEED_100M(GPIOB_PIN12) |         \
+                                     PIN_OSPEED_100M(GPIOB_PIN13) |         \
+                                     PIN_OSPEED_100M(GPIOB_PIN14) |         \
+                                     PIN_OSPEED_100M(GPIOB_PIN15))
 #define VAL_GPIOB_PUPDR             (PIN_PUPDR_PULLUP(GPIOB_PIN0) |         \
                                      PIN_PUPDR_PULLUP(GPIOB_PIN1) |         \
                                      PIN_PUPDR_PULLUP(GPIOB_PIN2) |         \
@@ -363,7 +363,7 @@
                                      PIN_PUPDR_FLOATING(GPIOB_SCL) |        \
                                      PIN_PUPDR_PULLUP(GPIOB_PIN7) |         \
                                      PIN_PUPDR_PULLUP(GPIOB_PIN8) |         \
-                                     PIN_PUPDR_PULLUP(GPIOB_SDA) |          \
+                                     PIN_PUPDR_FLOATING(GPIOB_SDA) |        \
                                      PIN_PUPDR_PULLUP(GPIOB_CLK_IN) |       \
                                      PIN_PUPDR_FLOATING(GPIOB_NOT_AVAILABLE) |\
                                      PIN_PUPDR_PULLUP(GPIOB_PIN12) |        \
