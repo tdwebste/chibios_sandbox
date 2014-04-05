@@ -130,8 +130,6 @@ void codec_i2s_init(uint16_t sampleRate, uint8_t nBits)
 	if (nBits!=16)
 		return;
 
-	palSetPadMode(GPIOA, 4, PAL_MODE_ALTERNATE);
-
 	// SPI3 in I2S Mode, Master
 	CODEC_I2S_ENABLE;
 
