@@ -1,5 +1,4 @@
-[#ftl]
-[#--
+/*
     ChibiOS/RT - Copyright (C) 2006,2007,2008,2009,2010,
                  2011,2012 Giovanni Di Sirio.
 
@@ -17,13 +16,6 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  --]
-[@pp.dropOutputFile /]
-[#import "/@lib/libutils.ftl" as utils /]
-[#import "/@lib/liblicense.ftl" as license /]
-[@pp.changeOutputFile name="board.c" /]
-/*
-[@license.EmitLicenseAsText /]
 */
 
 #include "ch.h"
@@ -48,7 +40,13 @@ const PALConfig pal_default_config =
   {VAL_GPIOE_MODER, VAL_GPIOE_OTYPER, VAL_GPIOE_OSPEEDR, VAL_GPIOE_PUPDR,
    VAL_GPIOE_ODR,   VAL_GPIOE_AFRL,   VAL_GPIOE_AFRH},
   {VAL_GPIOF_MODER, VAL_GPIOF_OTYPER, VAL_GPIOF_OSPEEDR, VAL_GPIOF_PUPDR,
-   VAL_GPIOF_ODR,   VAL_GPIOF_AFRL,   VAL_GPIOF_AFRH}
+   VAL_GPIOF_ODR,   VAL_GPIOF_AFRL,   VAL_GPIOF_AFRH},
+  {VAL_GPIOG_MODER, VAL_GPIOG_OTYPER, VAL_GPIOG_OSPEEDR, VAL_GPIOG_PUPDR,
+   VAL_GPIOG_ODR,   VAL_GPIOG_AFRL,   VAL_GPIOG_AFRH},
+  {VAL_GPIOH_MODER, VAL_GPIOH_OTYPER, VAL_GPIOH_OSPEEDR, VAL_GPIOH_PUPDR,
+   VAL_GPIOH_ODR,   VAL_GPIOH_AFRL,   VAL_GPIOH_AFRH},
+  {VAL_GPIOI_MODER, VAL_GPIOI_OTYPER, VAL_GPIOI_OSPEEDR, VAL_GPIOI_PUPDR,
+   VAL_GPIOI_ODR,   VAL_GPIOI_AFRL,   VAL_GPIOI_AFRH}
 };
 #endif
 
@@ -60,9 +58,6 @@ const PALConfig pal_default_config =
 void __early_init(void) {
 
   stm32_clock_init();
-[#if doc1.board.board_functions.__early_init[0]??]
-  ${doc1.board.board_functions.__early_init[0]}
-[/#if]
 }
 
 #if HAL_USE_SDC || defined(__DOXYGEN__)
@@ -70,28 +65,20 @@ void __early_init(void) {
  * @brief   SDC card detection.
  */
 bool_t sdc_lld_is_card_inserted(SDCDriver *sdcp) {
-[#if doc1.board.board_functions.sdc_lld_is_card_inserted[0]??]
-${doc1.board.board_functions.sdc_lld_is_card_inserted[0]}
-[#else]
 
   (void)sdcp;
   /* TODO: Fill the implementation.*/
   return TRUE;
-[/#if]
 }
 
 /**
  * @brief   SDC card write protection detection.
  */
 bool_t sdc_lld_is_write_protected(SDCDriver *sdcp) {
-[#if doc1.board.board_functions.sdc_lld_is_write_protected[0]??]
-${doc1.board.board_functions.sdc_lld_is_write_protected[0]}
-[#else]
 
   (void)sdcp;
   /* TODO: Fill the implementation.*/
   return FALSE;
-[/#if]
 }
 #endif /* HAL_USE_SDC */
 
@@ -100,28 +87,20 @@ ${doc1.board.board_functions.sdc_lld_is_write_protected[0]}
  * @brief   MMC_SPI card detection.
  */
 bool_t mmc_lld_is_card_inserted(MMCDriver *mmcp) {
-[#if doc1.board.board_functions.mmc_lld_is_card_inserted[0]??]
-${doc1.board.board_functions.mmc_lld_is_card_inserted[0]}
-[#else]
 
   (void)mmcp;
   /* TODO: Fill the implementation.*/
   return TRUE;
-[/#if]
 }
 
 /**
  * @brief   MMC_SPI card write protection detection.
  */
 bool_t mmc_lld_is_write_protected(MMCDriver *mmcp) {
-[#if doc1.board.board_functions.mmc_lld_is_write_protected[0]??]
-${doc1.board.board_functions.mmc_lld_is_write_protected[0]}
-[#else]
 
   (void)mmcp;
   /* TODO: Fill the implementation.*/
   return FALSE;
-[/#if]
 }
 #endif
 

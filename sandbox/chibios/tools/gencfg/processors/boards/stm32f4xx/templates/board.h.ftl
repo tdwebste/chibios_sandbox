@@ -39,6 +39,16 @@
 #define BOARD_${doc1.board.board_id[0]}
 #define BOARD_NAME                  "${doc1.board.board_name[0]}"
 
+[#if doc1.board.ethernet_phy[0]??]
+/*
+ * Ethernet PHY type.
+ */
+#define BOARD_PHY_ID                ${doc1.board.ethernet_phy.identifier[0]}
+[#if doc1.board.ethernet_phy.bus_type[0]?string == "RMII"]
+#define BOARD_PHY_RMII
+[/#if]
+[/#if]
+
 /*
  * Board oscillators-related settings.
 [#if doc1.board.clocks.@LSEFrequency[0]?number == 0]
@@ -51,8 +61,6 @@
 #if !defined(STM32_LSECLK)
 #define STM32_LSECLK                ${doc1.board.clocks.@LSEFrequency[0]}
 #endif
-
-#define LSEDRV                      (${doc1.board.clocks.@LSEDRV} << 3)
 
 #if !defined(STM32_HSECLK)
 #define STM32_HSECLK                ${doc1.board.clocks.@HSEFrequency[0]}
@@ -69,9 +77,9 @@
 #define STM32_VDD                   ${doc1.board.clocks.@VDD[0]}
 
 /*
- * MCU type as defined in the ST header file stm32f30x.h.
+ * MCU type as defined in the ST header file stm32f4xx.h.
  */
-#define STM32F30X
+#define STM32F4XX
 
 /*
  * IO pins assignments.

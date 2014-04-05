@@ -17,5 +17,4 @@ build
 *.log
 log.fmpp
 
-#ignore chibios_old in tim ham's code
-chibios_old
+.~lock.*

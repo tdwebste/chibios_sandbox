@@ -1,0 +1,6 @@
+sourceRoot: templates
+outputRoot:   ../../../../../boards/ST_STM32F401_DISCOVERY
+
+data: {
+    doc1: xml(../../../../xml/ST_STM32F401_DISCOVERY.xml)
+}
